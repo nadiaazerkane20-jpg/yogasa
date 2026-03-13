@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Lava Fitness — Premium Fitness & Yoga Gear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1585203536938703');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1585203536938703&ev=PageView&noscript=1"/></noscript>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--primary:#e7ceb9;--secondary:#ffffff;--accent:#e7ceb9;--bg:#ffffff;--text-dark:#1a1a1a;--text-mid:#555;--text-light:#888;
+--trustpilot:#00B67A;--danger:#c0392b;--shadow-sm:0 2px 8px rgba(0,0,0,.06);--shadow-md:0 4px 20px rgba(0,0,0,.08);
+--shadow-lg:0 8px 40px rgba(0,0,0,.12);--radius:12px;--radius-sm:8px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Poppins',sans-serif;color:var(--text-dark);background:var(--bg);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;border:none;font-family:inherit}
+.page{display:none}
+
+/* ANNOUNCEMENT BAR */
+.announce-bar{background:var(--text-dark);color:#fff;height:36px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;z-index:1001;font-size:12px;letter-spacing:.5px}
+.announce-slider{display:flex;transition:transform .5s ease;white-space:nowrap}
+.announce-slide{min-width:100%;text-align:center;padding:0 20px;display:flex;align-items:center;justify-content:center;gap:8px}
+.announce-slide a{color:var(--trustpilot);font-weight:600}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.06);transition:box-shadow .3s}
+.header.scrolled{box-shadow:var(--shadow-sm)}
+.header-inner{max-width:1280px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:700;letter-spacing:-0.5px;cursor:pointer;color:var(--text-dark)}
+.logo span{color:var(--primary)}
+.desktop-nav{display:none;gap:32px;align-items:center}
+.desktop-nav a{font-size:14px;font-weight:500;color:var(--text-mid);transition:color .2s;position:relative}
+.desktop-nav a:hover{color:var(--text-dark)}
+.desktop-nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--primary);transition:width .3s}
+.desktop-nav a:hover::after{width:100%}
+.header-right{display:flex;align-items:center;gap:16px}
+.hamburger{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;font-size:24px}
+.cart-icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+.cart-icon svg{width:22px;height:22px}
+
+/* MOBILE MENU */
+.mobile-menu{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:2000;transform:translateX(-100%);transition:transform .35s ease;padding:20px;display:flex;flex-direction:column}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px}
+.mobile-menu-close{width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:28px;background:none}
+.mobile-menu nav a{display:block;font-size:22px;font-weight:600;padding:16px 0;border-bottom:1px solid rgba(0,0,0,.06);color:var(--text-dark)}
+
+/* HERO */
+.hero{position:relative;min-height:85vh;display:flex;align-items:center;background:linear-gradient(135deg,#f8f0ea 0%,#faf6f2 50%,#ede3d9 100%);overflow:hidden;padding:60px 20px}
+.hero::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(231,206,185,.4) 0%,transparent 70%);pointer-events:none}
+.hero-content{max-width:1280px;margin:0 auto;width:100%;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.8);border:1px solid rgba(231,206,185,.5);border-radius:50px;padding:8px 18px;font-size:12px;font-weight:500;margin-bottom:24px;color:var(--text-mid)}
+.hero-badge svg{width:16px;height:16px}
+.hero h1{font-size:clamp(32px,7vw,64px);font-weight:800;line-height:1.1;letter-spacing:-1px;margin-bottom:16px;color:var(--text-dark)}
+.hero h1 span{display:block;color:var(--primary);-webkit-text-stroke:0}
+.hero p{font-size:clamp(15px,2vw,18px);color:var(--text-mid);max-width:480px;margin-bottom:32px;font-weight:300}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--text-dark);color:#fff;padding:16px 32px;border-radius:var(--radius);font-size:15px;font-weight:600;transition:all .3s;min-height:52px}
+.btn-primary:active{transform:scale(.97)}
+.btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--text-dark);padding:16px 32px;border:2px solid var(--text-dark);border-radius:var(--radius);font-size:15px;font-weight:600;transition:all .3s;min-height:52px}
+.social-proof-bar{margin-top:40px;display:flex;flex-wrap:wrap;gap:24px;align-items:center}
+.social-proof-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-mid)}
+.social-proof-item strong{color:var(--text-dark)}
+
+/* SECTION COMMON */
+.section{padding:60px 20px}
+.section-inner{max-width:1280px;margin:0 auto}
+.section-title{font-size:clamp(24px,4vw,36px);font-weight:700;text-align:center;margin-bottom:8px;letter-spacing:-0.5px}
+.section-sub{text-align:center;color:var(--text-mid);font-size:15px;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
+
+/* PRODUCT CARDS */
+.products-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.product-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:all .3s;cursor:pointer;position:relative}
+.product-card:active{transform:scale(.98)}
+.product-card-img{position:relative;aspect-ratio:1;overflow:hidden;background:#f5f0eb}
+.product-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.product-card:hover .product-card-img img{transform:scale(1.05)}
+.product-badge{position:absolute;top:12px;left:12px;background:var(--danger);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px;z-index:2}
+.product-card-info{padding:16px}
+.product-card-name{font-size:14px;font-weight:600;margin-bottom:8px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.product-card-price{display:flex;align-items:center;gap:8px}
+.price-current{font-size:18px;font-weight:700;color:var(--text-dark)}
+.price-old{font-size:14px;color:var(--text-light);text-decoration:line-through}
+.variant-dots{display:flex;gap:6px;margin-top:8px}
+.variant-dot{width:16px;height:16px;border-radius:50%;border:2px solid #ddd}
+
+/* FEATURES */
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.feature-card{background:#faf7f4;border:1px solid rgba(231,206,185,.3);border-radius:var(--radius);padding:24px 16px;text-align:center;transition:all .3s}
+.feature-card:active{transform:scale(.97)}
+.feature-icon{font-size:28px;margin-bottom:12px}
+.feature-card h3{font-size:14px;font-weight:600;margin-bottom:4px}
+.feature-card p{font-size:12px;color:var(--text-mid)}
+
+/* REVIEWS */
+.reviews-container{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;display:flex;gap:16px;padding-bottom:16px;scrollbar-width:none}
+.reviews-container::-webkit-scrollbar{display:none}
+.review-card{min-width:280px;max-width:320px;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:20px;scroll-snap-align:start;flex-shrink:0}
+.review-stars{color:var(--trustpilot);font-size:14px;margin-bottom:8px;letter-spacing:2px}
+.review-text{font-size:13px;color:var(--text-mid);line-height:1.5;margin-bottom:12px}
+.review-author{display:flex;align-items:center;gap:10px}
+.review-avatar{width:36px;height:36px;border-radius:50%;object-fit:cover}
+.review-name{font-size:13px;font-weight:600}
+.review-date{font-size:11px;color:var(--text-light)}
+.review-verified{font-size:11px;color:var(--trustpilot);font-weight:500}
+.trustpilot-link{display:inline-flex;align-items:center;gap:8px;color:var(--trustpilot);font-weight:600;font-size:14px;margin-top:20px;padding:10px 20px;border:2px solid var(--trustpilot);border-radius:var(--radius);transition:all .3s}
+.trustpilot-link:active{background:var(--trustpilot);color:#fff}
+
+/* FAQ */
+.faq-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;justify-content:center}
+.faq-tab{padding:10px 20px;border-radius:50px;font-size:13px;font-weight:500;background:#f5f0eb;color:var(--text-mid);border:none;transition:all .3s}
+.faq-tab.active{background:var(--text-dark);color:#fff}
+.faq-item{border-bottom:1px solid rgba(0,0,0,.06);overflow:hidden}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;font-size:15px;font-weight:500;gap:16px;min-height:56px}
+.faq-question span{transition:transform .3s}
+.faq-item.open .faq-question span{transform:rotate(180deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;font-size:14px;color:var(--text-mid);line-height:1.7}
+.faq-item.open .faq-answer{max-height:500px}
+.faq-answer-inner{padding-bottom:18px}
+
+/* DELIVERY TIMER */
+.delivery-timer{background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);color:#fff;padding:24px 20px;text-align:center}
+.timer-row{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.timer-icon{font-size:24px}
+.timer-text{font-size:14px;font-weight:300}
+.timer-countdown{display:flex;gap:4px;align-items:center}
+.timer-digit{background:rgba(255,255,255,.15);padding:6px 10px;border-radius:6px;font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+.timer-sep{font-size:18px;font-weight:700}
+
+/* PRODUCT PAGE */
+.product-page{padding-top:0}
+.product-gallery{position:relative;background:#f5f0eb}
+.product-main-img{width:100%;aspect-ratio:1;object-fit:cover}
+.product-thumbnails{display:flex;gap:8px;padding:12px 16px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.product-thumb{width:64px;height:64px;border-radius:8px;overflow:hidden;border:2px solid transparent;flex-shrink:0;cursor:pointer;opacity:.6;transition:all .2s}
+.product-thumb.active{border-color:var(--text-dark);opacity:1}
+.product-thumb img{width:100%;height:100%;object-fit:cover}
+.product-details{padding:20px}
+.product-title-main{font-size:22px;font-weight:700;line-height:1.3;margin-bottom:12px}
+.product-trustpilot{display:inline-flex;align-items:center;gap:6px;margin-bottom:16px;font-size:13px;color:var(--text-mid)}
+.product-trustpilot .stars{color:var(--trustpilot)}
+.product-pricing{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.product-price-main{font-size:28px;font-weight:800;color:var(--text-dark)}
+.product-price-old{font-size:16px;color:var(--text-light);text-decoration:line-through}
+.product-discount-badge{background:var(--danger);color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px}
+.variant-selector{margin-bottom:20px}
+.variant-selector label{font-size:13px;font-weight:600;margin-bottom:8px;display:block}
+.variant-buttons{display:flex;flex-wrap:wrap;gap:8px}
+.variant-btn{padding:8px 16px;border-radius:50px;font-size:12px;font-weight:500;background:#f5f0eb;color:var(--text-dark);border:2px solid transparent;transition:all .2s;min-height:40px}
+.variant-btn.active{border-color:var(--text-dark);background:#fff}
+.btn-atc{width:100%;min-height:56px;background:var(--text-dark);color:#fff;border-radius:var(--radius);font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;text-transform:uppercase;letter-spacing:.5px}
+.btn-atc:active{transform:scale(.98);background:#333}
+.product-trust-badges{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap}
+.trust-badge-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-mid)}
+.trust-badge-item svg{width:18px;height:18px;color:var(--trustpilot)}
+
+/* PRODUCT FEATURES GRID */
+.product-features-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:24px 20px}
+.pf-card{background:#faf7f4;border-radius:var(--radius-sm);padding:16px;text-align:center;border:1px solid rgba(0,0,0,.04)}
+.pf-card .icon{font-size:24px;margin-bottom:8px}
+.pf-card h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.pf-card p{font-size:11px;color:var(--text-mid)}
+
+/* SPECS TABLE */
+.specs-section{padding:24px 20px}
+.specs-section h3{font-size:18px;font-weight:700;margin-bottom:16px}
+.specs-table{width:100%;border-collapse:collapse}
+.specs-table tr:nth-child(even){background:#faf7f4}
+.specs-table td{padding:12px 16px;font-size:13px;border-bottom:1px solid rgba(0,0,0,.04)}
+.specs-table td:first-child{color:var(--text-mid);width:40%}
+.specs-table td:last-child{font-weight:500}
+
+/* PACKAGE CONTENTS */
+.package-section{padding:24px 20px;background:#faf7f4;margin:0 0}
+.package-section h3{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.package-item{display:flex;align-items:center;gap:10px;padding:10px 0;font-size:14px}
+.package-item .check{color:var(--trustpilot);font-weight:700}
+
+/* DESCRIPTION */
+.description-section{padding:24px 20px}
+.description-section h3{font-size:18px;font-weight:700;margin-bottom:16px}
+.description-section p{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:12px}
+.description-section strong{color:var(--text-dark)}
+
+/* YOU MAY ALSO LIKE */
+.also-like{padding:24px 20px}
+.also-like h3{font-size:18px;font-weight:700;margin-bottom:16px}
+.also-like-scroll{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:none}
+.also-like-scroll::-webkit-scrollbar{display:none}
+.also-like-card{min-width:160px;scroll-snap-align:start;flex-shrink:0;cursor:pointer;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow-sm)}
+.also-like-card img{aspect-ratio:1;object-fit:cover;width:100%}
+.also-like-card-info{padding:10px}
+.also-like-card-info h4{font-size:12px;font-weight:600;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.also-like-card-info .price{font-size:14px;font-weight:700}
+
+/* STICKY ATC BAR */
+.sticky-atc{position:fixed;bottom:0;left:0;width:100%;z-index:999;background:#fff;border-top:1px solid rgba(0,0,0,.08);padding:12px 16px;display:none;box-shadow:0 -4px 20px rgba(0,0,0,.1)}
+.sticky-atc .btn-atc{margin:0}
+
+/* CONTACT */
+.contact-form{max-width:600px;margin:0 auto}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.form-group input,.form-group textarea{width:100%;padding:14px 16px;border:1px solid rgba(0,0,0,.1);border-radius:var(--radius-sm);font-size:14px;font-family:inherit;transition:border .2s}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--primary)}
+.form-group textarea{resize:vertical;min-height:120px}
+
+/* NEWSLETTER */
+.newsletter{background:linear-gradient(135deg,#1a1a1a,#2d2d2d);color:#fff;padding:60px 20px;text-align:center}
+.newsletter h3{font-size:clamp(20px,4vw,28px);font-weight:700;margin-bottom:8px}
+.newsletter p{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:24px}
+.newsletter-form{display:flex;gap:8px;max-width:400px;margin:0 auto;flex-wrap:wrap}
+.newsletter-form input{flex:1;min-width:200px;padding:14px 16px;border:none;border-radius:var(--radius-sm);font-size:14px}
+.newsletter-form button{padding:14px 24px;background:var(--primary);color:var(--text-dark);border-radius:var(--radius-sm);font-weight:600;font-size:14px;white-space:nowrap}
+
+/* FOOTER */
+.footer{background:#1a1a1a;color:rgba(255,255,255,.7);padding:48px 20px 24px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:32px}
+.footer-col h4{color:#fff;font-size:14px;font-weight:600;margin-bottom:12px}
+.footer-col a{display:block;font-size:13px;padding:4px 0;transition:color .2s}
+.footer-col a:hover{color:var(--primary)}
+.footer-trustpilot{display:inline-flex;align-items:center;gap:6px;color:var(--trustpilot);font-size:13px;margin-top:8px}
+.footer-legal{padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:11px;text-align:center;color:rgba(255,255,255,.4)}
+.footer-legal a{color:rgba(255,255,255,.5)}
+
+/* INSTAGRAM FEED */
+.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.insta-item{aspect-ratio:1;background:#f5f0eb;border-radius:4px;overflow:hidden}
+.insta-item img{width:100%;height:100%;object-fit:cover}
+
+/* COLOR IMAGE VARIANT SELECTOR */
+.color-img-btn{width:48px;height:48px;border-radius:8px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:all .2s;flex-shrink:0;opacity:.7;background:#f5f0eb}
+.color-img-btn.active{border-color:var(--text-dark);opacity:1;box-shadow:0 0 0 1px var(--text-dark)}
+.color-img-btn:active{transform:scale(.92)}
+.color-img-btn img{width:100%;height:100%;object-fit:cover}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(20px);transition:all .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* COLLECTION PAGE FILTERS */
+.collection-header{text-align:center;padding:40px 20px 20px}
+.collection-header h1{font-size:28px;font-weight:700}
+.filter-bar{display:flex;gap:8px;padding:0 20px 20px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.filter-btn{padding:8px 18px;border-radius:50px;font-size:13px;font-weight:500;background:#f5f0eb;color:var(--text-mid);border:none;white-space:nowrap}
+.filter-btn.active{background:var(--text-dark);color:#fff}
+
+/* DESKTOP */
+@media(min-width:768px){
+.products-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+.features-grid{grid-template-columns:repeat(3,1fr)}
+.footer-grid{grid-template-columns:repeat(4,1fr)}
+.hero{padding:80px 40px}
+.section{padding:80px 40px}
+.insta-grid{grid-template-columns:repeat(6,1fr)}
+}
+@media(min-width:1024px){
+.hamburger{display:none}
+.desktop-nav{display:flex}
+.products-grid{grid-template-columns:repeat(3,1fr)}
+.product-page-layout{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.product-gallery{position:sticky;top:60px;align-self:start}
+.hero-content{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.review-card{min-width:340px}
+.also-like-card{min-width:200px}
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce-bar">
+<div class="announce-slider" id="announceSlider">
+<div class="announce-slide">✦ FREE 24-HOUR EXPRESS DELIVERY ✦</div>
+<div class="announce-slide">★ 4.8/5 on <a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank">Trustpilot</a> — Excellent</div>
+<div class="announce-slide">📦 OFFICIAL ALO SOCKS — PACK OF 3 PAIRS</div>
+<div class="announce-slide">⚠️ LIMITED TO 1 PER ORDER — HIGH DEMAND</div>
+<div class="announce-slide">🔒 100% SECURE CHECKOUT</div>
+</div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="mainHeader">
+<div class="header-inner">
+<button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+<div class="logo" onclick="navigateTo('home')">LAVA<span>FITNESS</span></div>
+<nav class="desktop-nav">
+<a href="#" onclick="navigateTo('home');return false">Home</a>
+<a href="#" onclick="navigateTo('collection');return false">Collection</a>
+<a href="#" onclick="navigateTo('faq');return false">FAQ</a>
+<a href="#" onclick="navigateTo('contact');return false">Contact</a>
+</nav>
+<div class="header-right">
+<a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank" class="cart-icon" title="Trustpilot">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+</a>
+</div>
+</div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu-header">
+<div class="logo">LAVA<span style="color:var(--primary)">FITNESS</span></div>
+<button class="mobile-menu-close" onclick="toggleMobileMenu()">✕</button>
+</div>
+<nav>
+<a href="#" onclick="navigateTo('home');toggleMobileMenu();return false">Home</a>
+<a href="#" onclick="navigateTo('collection');toggleMobileMenu();return false">Collection</a>
+<a href="#" onclick="navigateTo('faq');toggleMobileMenu();return false">FAQ</a>
+<a href="#" onclick="navigateTo('contact');toggleMobileMenu();return false">Contact</a>
+</nav>
+<div style="margin-top:auto;padding:20px 0">
+<a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank" class="trustpilot-link" style="width:100%;justify-content:center">
+<span style="color:var(--trustpilot)">★★★★★</span> 4.8/5 Trustpilot
+</a>
+</div>
+</div>
+
+<!-- =================== HOME PAGE =================== -->
+<div class="page" id="home">
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+<div>
+<div class="hero-badge">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+3,000+ Happy Customers
+</div>
+<h1>Elevate Your<span>Fitness Journey</span></h1>
+<p>Official ALO performance socks — pack of 3 pairs. Crafted for yoga, pilates, and everyday fitness. 24-hour express delivery across Saudi Arabia.</p>
+<div class="hero-btns">
+<a href="#" class="btn-primary" onclick="navigateTo('collection');return false">Shop Collection →</a>
+<a href="#" class="btn-outline" onclick="navigateTo('faq');return false">Learn More</a>
+</div>
+<div class="social-proof-bar">
+<div class="social-proof-item"><span style="color:var(--trustpilot)">★★★★★</span> <strong>4.8/5</strong> Trustpilot</div>
+<div class="social-proof-item"><strong>3,200+</strong> Orders Shipped</div>
+<div class="social-proof-item"><strong>100%</strong> Secure</div>
+</div>
+</div>
+<div style="display:none"></div>
+</div>
+</section>
+
+<!-- DELIVERY TIMER -->
+<div class="delivery-timer">
+<div class="timer-row">
+<span class="timer-icon">🚚</span>
+<span class="timer-text">Order within</span>
+<div class="timer-countdown">
+<span class="timer-digit" id="timerH">00</span><span class="timer-sep">:</span>
+<span class="timer-digit" id="timerM">00</span><span class="timer-sep">:</span>
+<span class="timer-digit" id="timerS">00</span>
+</div>
+<span class="timer-text">for 24-hour delivery</span>
+</div>
+</div>
+
+<!-- FEATURED COLLECTION -->
+<section class="section" style="background:#faf7f4">
+<div class="section-inner">
+<div class="section-title fade-up">Featured Collection</div>
+<div class="section-sub fade-up">Official ALO performance socks — each order includes a pack of 3 pairs with 24h express delivery.</div>
+<div class="products-grid" id="featuredGrid"></div>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+<div class="section-inner">
+<div class="section-title fade-up">Why Choose Lava Fitness</div>
+<div class="section-sub fade-up">Premium quality you can feel with every step</div>
+<div class="features-grid">
+<div class="feature-card fade-up"><div class="feature-icon">✅</div><h3>Official ALO Products</h3><p>100% authentic & certified</p></div>
+<div class="feature-card fade-up"><div class="feature-icon">⚡</div><h3>24-Hour Delivery</h3><p>Order today, receive tomorrow</p></div>
+<div class="feature-card fade-up"><div class="feature-icon">📦</div><h3>Pack of 3 Pairs</h3><p>Incredible value bundle</p></div>
+<div class="feature-card fade-up"><div class="feature-icon">🔒</div><h3>Secure Payments</h3><p>100% encrypted checkout</p></div>
+<div class="feature-card fade-up"><div class="feature-icon">↩️</div><h3>30-Day Returns</h3><p>Easy, hassle-free returns</p></div>
+<div class="feature-card fade-up"><div class="feature-icon">⚠️</div><h3>Limit 1 Per Order</h3><p>High demand — order now</p></div>
+</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" style="background:#faf7f4">
+<div class="section-inner">
+<div class="section-title fade-up">What Our Customers Say</div>
+<div style="text-align:center;margin-bottom:16px">
+<span style="color:var(--trustpilot);font-size:20px;letter-spacing:2px">★★★★★</span>
+<span style="font-weight:600;margin-left:8px">4.8/5</span>
+<span style="color:var(--text-mid);font-size:13px;margin-left:4px">based on 2,400+ reviews</span>
+</div>
+<div class="reviews-container" id="reviewsHome"></div>
+<div style="text-align:center;margin-top:16px">
+<a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank" class="trustpilot-link">See All Reviews on Trustpilot →</a>
+</div>
+</div>
+</section>
+
+<!-- FAQ PREVIEW -->
+<section class="section">
+<div class="section-inner">
+<div class="section-title fade-up">Frequently Asked Questions</div>
+<div class="section-sub fade-up">Everything you need to know</div>
+<div id="faqHomeContainer"></div>
+<div style="text-align:center;margin-top:24px">
+<a href="#" class="btn-outline" onclick="navigateTo('faq');return false">View All FAQ →</a>
+</div>
+</div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+<h3>Join the Lava Family</h3>
+<p>Get 10% off your first order + exclusive drops</p>
+<div class="newsletter-form">
+<input type="email" placeholder="Enter your email">
+<button type="button">Subscribe</button>
+</div>
+</section>
+
+</div>
+
+<!-- =================== COLLECTION PAGE =================== -->
+<div class="page" id="collection">
+<div class="collection-header">
+<h1>Our Collection</h1>
+<p style="color:var(--text-mid);font-size:14px;margin-top:8px">Premium performance socks for every workout</p>
+</div>
+<div class="filter-bar">
+<button class="filter-btn active">All</button>
+<button class="filter-btn">Best Sellers</button>
+<button class="filter-btn">New Arrivals</button>
+<button class="filter-btn">Sale</button>
+</div>
+<div style="padding:0 20px 60px;max-width:1280px;margin:0 auto">
+<div class="products-grid" id="collectionGrid"></div>
+</div>
+</div>
+
+<!-- =================== PRODUCT PAGE (single variant group) =================== -->
+<div class="page" id="product-1">
+<div class="product-page">
+<div class="product-page-layout">
+<!-- Gallery -->
+<div class="product-gallery">
+<img class="product-main-img" id="mainImg1" src="https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04439_b1_s1_a134_dSP26.jpg?v=1772833288" alt="Unisex Half-Crew Throwback Sock">
+<div class="product-thumbnails" id="thumbs1"></div>
+</div>
+<!-- Details -->
+<div class="product-details">
+<div class="product-trustpilot">
+<a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank">
+<span class="stars">★★★★★</span> 4.8/5 · 2,400+ reviews on Trustpilot
+</a>
+</div>
+<h1 class="product-title-main">Official ALO — Unisex Half-Crew Throwback Sock <span style="color:var(--trustpilot);font-size:16px;font-weight:600;display:block;margin-top:4px">Pack of 3 Pairs</span></h1>
+<div class="product-pricing">
+<span class="product-price-main" id="prodPrice1">44 SAR</span>
+<span class="product-price-old" id="prodOldPrice1">123 SAR</span>
+</div>
+
+<div class="variant-selector">
+<label>Color / Style</label>
+<div class="variant-buttons" id="variantBtns1"></div>
+</div>
+
+<a id="atcLink1" href="#" target="_blank" class="btn-atc">Add to Cart</a>
+
+<!-- OFFICIAL ALO HIGHLIGHT BOX -->
+<div style="margin-top:20px;background:linear-gradient(135deg,#f8f0ea,#faf6f2);border:2px solid var(--primary);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="background:var(--text-dark);color:#fff;font-size:10px;font-weight:700;padding:4px 10px;border-radius:50px;letter-spacing:1px">OFFICIAL</span>
+<span style="font-size:14px;font-weight:700;color:var(--text-dark)">100% Official ALO Socks — Authentic Product</span>
+</div>
+<div style="display:flex;align-items:center;gap:10px">
+<svg viewBox="0 0 24 24" fill="none" stroke="var(--trustpilot)" stroke-width="2.5" width="20" height="20"><rect x="1" y="3" width="15" height="13" rx="2"/><polyline points="16 8 20 8 23 11 23 16 20 16"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+<span style="font-size:14px;font-weight:600;color:var(--text-dark)">⚡ Express 24-Hour Delivery</span>
+</div>
+<div style="display:flex;align-items:center;gap:10px">
+<svg viewBox="0 0 24 24" fill="none" stroke="var(--trustpilot)" stroke-width="2.5" width="20" height="20"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+<span style="font-size:14px;font-weight:600;color:var(--text-dark)">📦 Pack of 3 Pairs Included</span>
+</div>
+</div>
+
+<!-- LIMIT 1 PER ORDER WARNING -->
+<div style="margin-top:12px;background:#fff3cd;border:1px solid #ffc107;border-radius:var(--radius-sm);padding:12px 16px;display:flex;align-items:center;gap:10px">
+<span style="font-size:20px">⚠️</span>
+<div>
+<span style="font-size:13px;font-weight:700;color:#856404">Limited to 1 Per Order</span>
+<span style="font-size:12px;color:#856404;display:block">Due to high demand, only 1 item per customer is allowed.</span>
+</div>
+</div>
+
+<div style="margin-top:16px">
+<a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--trustpilot);font-weight:500">
+<span>★★★★★</span> Rated Excellent on Trustpilot
+</a>
+</div>
+</div>
+</div>
+
+<!-- Features Grid -->
+<div class="product-features-grid">
+<div class="pf-card"><div class="icon">✅</div><h4>Official ALO</h4><p>100% Authentic Product</p></div>
+<div class="pf-card"><div class="icon">⚡</div><h4>24h Delivery</h4><p>Express shipping included</p></div>
+<div class="pf-card"><div class="icon">📦</div><h4>3 Pairs Pack</h4><p>Incredible value bundle</p></div>
+<div class="pf-card"><div class="icon">🔒</div><h4>Secure Payment</h4><p>100% encrypted checkout</p></div>
+</div>
+
+<!-- Specs -->
+<div class="specs-section">
+<h3>Technical Specifications</h3>
+<table class="specs-table">
+<tr><td>Type</td><td>Half-Crew Sock</td></tr>
+<tr><td>Fit</td><td>Unisex</td></tr>
+<tr><td>Material</td><td>Premium Cotton Blend</td></tr>
+<tr><td>Cushioning</td><td>Targeted Arch Support</td></tr>
+<tr><td>Style</td><td>Throwback Classic</td></tr>
+<tr><td>Care</td><td>Machine Washable</td></tr>
+<tr><td>Origin</td><td>Imported</td></tr>
+</table>
+</div>
+
+<!-- Package Contents -->
+<div class="package-section">
+<h3>📦 What's In The Box</h3>
+<div class="package-item"><span class="check">✓</span> <strong>3× Pairs</strong> of Official ALO Half-Crew Socks</div>
+<div class="package-item"><span class="check">✓</span> Premium Branded Packaging</div>
+<div class="package-item"><span class="check">✓</span> Care Instructions Card</div>
+<div class="package-item"><span class="check">✓</span> Certificate of Authenticity</div>
+</div>
+
+<!-- Description -->
+<div class="description-section">
+<h3>About This Product</h3>
+<p>Introducing the <strong>Official ALO Unisex Half-Crew Throwback Sock — Pack of 3 Pairs</strong>. Where vintage aesthetics meet modern performance engineering. Whether you're flowing through a yoga sequence, powering through a pilates session, or hitting the gym for a high-intensity workout, these socks deliver unmatched comfort and support.</p>
+<p>This exclusive bundle includes <strong>3 pairs of authentic ALO socks</strong>, crafted from a <strong>premium cotton blend</strong> with targeted arch compression. The half-crew height provides ankle support without restricting movement, while the breathable knit construction keeps your feet cool and dry throughout your workout.</p>
+<p>The retro-inspired colorway adds a stylish touch to any athleisure outfit. <strong>Reinforced heel and toe zones</strong> ensure long-lasting durability, so you can count on these socks session after session. The ribbed cuff ensures a stay-put fit that won't slide down mid-movement.</p>
+<p><strong>⚡ Express 24-hour delivery</strong> across Saudi Arabia — order today, receive tomorrow. Available in multiple colorways, the Throwback Sock collection lets you express your personal style while performing at your best. <strong>Machine washable</strong> and built to maintain shape and color after repeated washes.</p>
+<p style="background:#fff3cd;padding:12px;border-radius:8px;font-size:13px;color:#856404;font-weight:500">⚠️ Due to extremely high demand, this product is <strong>limited to 1 per order</strong>. Each order includes 3 pairs of official ALO socks.</p>
+</div>
+
+<!-- Product Reviews -->
+<section class="section">
+<div class="section-inner">
+<h3 style="font-size:18px;font-weight:700;margin-bottom:16px">Customer Reviews</h3>
+<div class="reviews-container" id="productReviews1"></div>
+<div style="text-align:center;margin-top:16px">
+<a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank" class="trustpilot-link">See All Reviews on Trustpilot →</a>
+</div>
+</div>
+</section>
+
+<!-- You May Also Like -->
+<div class="also-like">
+<h3>You May Also Like</h3>
+<div class="also-like-scroll" id="alsoLike1"></div>
+</div>
+
+</div>
+<!-- Sticky ATC -->
+<div class="sticky-atc" id="stickyATC1">
+<a id="stickyAtcLink1" href="#" target="_blank" class="btn-atc">Add to Cart — 44 SAR</a>
+</div>
+</div>
+
+<!-- =================== SOCKSNEW PAGE (All 35 colors + Size S/M/L) =================== -->
+<div class="page" id="socksnew">
+<div class="product-page">
+<div class="product-page-layout">
+<div class="product-gallery">
+<img class="product-main-img" id="mainImgNew" src="https://cdn.shopify.com/s/files/1/2185/2813/products/A0480U_0100_b1_a1.jpg?v=1675728954" alt="Official ALO Half-Crew Throwback Sock - Black/White">
+<div class="product-thumbnails" id="thumbsNew"></div>
+</div>
+<div class="product-details">
+<div class="product-trustpilot">
+<a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank">
+<span class="stars">★★★★★</span> 4.8/5 · 2,400+ reviews on Trustpilot
+</a>
+</div>
+<h1 class="product-title-main">Official ALO — Unisex Half-Crew Throwback Sock <span style="color:var(--trustpilot);font-size:16px;font-weight:600;display:block;margin-top:4px">Pack of 3 Pairs · 38 Colors Available</span></h1>
+<div class="product-pricing">
+<span class="product-price-main">44 SAR</span>
+<span class="product-price-old">123 SAR</span>
+<span class="product-discount-badge">-64%</span>
+</div>
+
+<!-- COLOR SELECTOR (image thumbnails) -->
+<div class="variant-selector">
+<label>Color: <span id="colorNameNew" style="font-weight:400;color:var(--text-mid)">Black/White</span></label>
+<div id="colorDotsNew" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"></div>
+</div>
+
+<!-- SIZE SELECTOR -->
+<div class="variant-selector">
+<label>Size</label>
+<div style="display:flex;gap:8px;margin-top:8px">
+<button class="variant-btn" data-size="S" onclick="selectSizeNew('S',this)">S</button>
+<button class="variant-btn active" data-size="M" onclick="selectSizeNew('M',this)">M</button>
+<button class="variant-btn" data-size="L" onclick="selectSizeNew('L',this)">L</button>
+</div>
+<div style="margin-top:8px">
+<button onclick="document.getElementById('sizeGuideModal').style.display='flex'" style="font-size:12px;color:var(--text-mid);background:none;text-decoration:underline;padding:0">📏 Size Guide (Saudi Arabia)</button>
+</div>
+</div>
+
+<a id="atcLinkNew" href="#" target="_blank" class="btn-atc">Add to Cart — 44 SAR</a>
+
+<!-- OFFICIAL ALO HIGHLIGHT BOX -->
+<div style="margin-top:20px;background:linear-gradient(135deg,#f8f0ea,#faf6f2);border:2px solid var(--primary);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="background:var(--text-dark);color:#fff;font-size:10px;font-weight:700;padding:4px 10px;border-radius:50px;letter-spacing:1px">OFFICIAL</span>
+<span style="font-size:14px;font-weight:700;color:var(--text-dark)">100% Official ALO Socks — Authentic Product</span>
+</div>
+<div style="display:flex;align-items:center;gap:10px">
+<span style="font-size:14px;font-weight:600;color:var(--text-dark)">⚡ Express 24-Hour Delivery</span>
+</div>
+<div style="display:flex;align-items:center;gap:10px">
+<span style="font-size:14px;font-weight:600;color:var(--text-dark)">📦 Pack of 3 Pairs Included</span>
+</div>
+</div>
+<div style="margin-top:12px;background:#fff3cd;border:1px solid #ffc107;border-radius:var(--radius-sm);padding:12px 16px;display:flex;align-items:center;gap:10px">
+<span style="font-size:20px">⚠️</span>
+<div>
+<span style="font-size:13px;font-weight:700;color:#856404">Limited to 1 Per Order</span>
+<span style="font-size:12px;color:#856404;display:block">Due to high demand, only 1 item per customer is allowed.</span>
+</div>
+</div>
+<div style="margin-top:16px">
+<a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--trustpilot);font-weight:500">
+<span>★★★★★</span> Rated Excellent on Trustpilot
+</a>
+</div>
+</div>
+</div>
+
+<div class="product-features-grid">
+<div class="pf-card"><div class="icon">✅</div><h4>Official ALO</h4><p>100% Authentic Product</p></div>
+<div class="pf-card"><div class="icon">⚡</div><h4>24h Delivery</h4><p>Express shipping included</p></div>
+<div class="pf-card"><div class="icon">📦</div><h4>3 Pairs Pack</h4><p>Incredible value bundle</p></div>
+<div class="pf-card"><div class="icon">🔒</div><h4>Secure Payment</h4><p>100% encrypted checkout</p></div>
+</div>
+
+<div class="specs-section">
+<h3>Technical Specifications</h3>
+<table class="specs-table">
+<tr><td>Type</td><td>Half-Crew Sock</td></tr>
+<tr><td>Fit</td><td>Unisex</td></tr>
+<tr><td>Brand</td><td>ALO Yoga (Official)</td></tr>
+<tr><td>Material</td><td>Premium Cotton Blend</td></tr>
+<tr><td>Sizes</td><td>S / M / L</td></tr>
+<tr><td>Colors</td><td>35 Available</td></tr>
+<tr><td>Pack</td><td>3 Pairs per Order</td></tr>
+<tr><td>Care</td><td>Machine Washable</td></tr>
+</table>
+</div>
+
+<div class="package-section">
+<h3>📦 What's In The Box</h3>
+<div class="package-item"><span class="check">✓</span> <strong>3× Pairs</strong> of Official ALO Half-Crew Socks</div>
+<div class="package-item"><span class="check">✓</span> Premium Branded Packaging</div>
+<div class="package-item"><span class="check">✓</span> Care Instructions Card</div>
+<div class="package-item"><span class="check">✓</span> Certificate of Authenticity</div>
+</div>
+
+<div class="description-section">
+<h3>About This Product</h3>
+<p>Introducing the <strong>Official ALO Unisex Half-Crew Throwback Sock — Pack of 3 Pairs</strong>. Now available in <strong>38 stunning colorways</strong> with sizes S, M, and L. Whether you're flowing through a yoga sequence, powering through a pilates session, or hitting the gym, these socks deliver unmatched comfort.</p>
+<p>Crafted from a <strong>premium cotton blend</strong> with targeted arch compression. The half-crew height provides ankle support without restricting movement, while the breathable knit construction keeps your feet cool and dry.</p>
+<p><strong>⚡ Express 24-hour delivery</strong> across Saudi Arabia — order today, receive tomorrow.</p>
+<p style="background:#fff3cd;padding:12px;border-radius:8px;font-size:13px;color:#856404;font-weight:500">⚠️ Due to extremely high demand, this product is <strong>limited to 1 per order</strong>. Each order includes 3 pairs of official ALO socks.</p>
+</div>
+
+<section class="section">
+<div class="section-inner">
+<h3 style="font-size:18px;font-weight:700;margin-bottom:16px">Customer Reviews</h3>
+<div class="reviews-container" id="productReviewsNew"></div>
+<div style="text-align:center;margin-top:16px">
+<a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank" class="trustpilot-link">See All Reviews on Trustpilot →</a>
+</div>
+</div>
+</section>
+</div>
+
+<!-- SIZE GUIDE MODAL -->
+<div id="sizeGuideModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:3000;align-items:center;justify-content:center;padding:20px">
+<div style="background:#fff;border-radius:16px;padding:24px;max-width:420px;width:100%;max-height:80vh;overflow-y:auto;position:relative">
+<button onclick="document.getElementById('sizeGuideModal').style.display='none'" style="position:absolute;top:12px;right:12px;background:none;font-size:24px;width:36px;height:36px;display:flex;align-items:center;justify-content:center">✕</button>
+<h3 style="font-size:18px;font-weight:700;margin-bottom:16px">📏 Size Guide — Saudi Arabia</h3>
+<p style="font-size:13px;color:var(--text-mid);margin-bottom:16px">Unisex Half-Crew Throwback Sock</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+<thead><tr style="background:#f5f0eb">
+<th style="padding:10px;text-align:left;font-weight:600">Size</th>
+<th style="padding:10px;text-align:center;font-weight:600">EU</th>
+<th style="padding:10px;text-align:center;font-weight:600">US</th>
+<th style="padding:10px;text-align:center;font-weight:600">Foot (cm)</th>
+</tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid #eee"><td style="padding:10px;font-weight:600">S</td><td style="padding:10px;text-align:center">35 – 38</td><td style="padding:10px;text-align:center">5 – 7.5</td><td style="padding:10px;text-align:center">22 – 24 cm</td></tr>
+<tr style="border-bottom:1px solid #eee;background:#faf7f4"><td style="padding:10px;font-weight:600">M</td><td style="padding:10px;text-align:center">38.5 – 42</td><td style="padding:10px;text-align:center">8 – 10.5</td><td style="padding:10px;text-align:center">24 – 27 cm</td></tr>
+<tr><td style="padding:10px;font-weight:600">L</td><td style="padding:10px;text-align:center">42.5 – 46</td><td style="padding:10px;text-align:center">11 – 14</td><td style="padding:10px;text-align:center">27 – 30 cm</td></tr>
+</tbody>
+</table>
+<p style="margin-top:16px;font-size:12px;color:var(--text-mid)"><strong>Tip:</strong> If you're between sizes, we recommend going one size up for a more comfortable fit. Most men in Saudi Arabia wear <strong>M or L</strong>. Most women wear <strong>S or M</strong>.</p>
+<button onclick="document.getElementById('sizeGuideModal').style.display='none'" class="btn-primary" style="width:100%;margin-top:16px">Got it</button>
+</div>
+</div>
+
+<!-- Sticky ATC for socksnew -->
+<div class="sticky-atc" id="stickyATCNew" style="display:none">
+<a id="stickyAtcLinkNew" href="#" target="_blank" class="btn-atc">Add to Cart — 44 SAR</a>
+</div>
+</div>
+
+<!-- =================== FAQ PAGE =================== -->
+<div class="page" id="faq">
+<section class="section">
+<div class="section-inner">
+<div class="section-title">Frequently Asked Questions</div>
+<div class="section-sub">Find answers to all your questions</div>
+<div class="faq-tabs" id="faqTabs"></div>
+<div id="faqFullContainer"></div>
+</div>
+</section>
+</div>
+
+<!-- =================== CONTACT PAGE =================== -->
+<div class="page" id="contact">
+<section class="section">
+<div class="section-inner">
+<div class="section-title">Contact Us</div>
+<div class="section-sub">We'd love to hear from you</div>
+<div class="contact-form">
+<div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name"></div>
+<div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+<div class="form-group"><label>Subject</label><input type="text" placeholder="How can we help?"></div>
+<div class="form-group"><label>Message</label><textarea placeholder="Tell us more..."></textarea></div>
+<button class="btn-primary" style="width:100%" type="button">Send Message</button>
+</div>
+<div style="margin-top:40px;text-align:center;color:var(--text-mid);font-size:13px;line-height:2">
+<p><strong>Lava Fitness LLC</strong></p>
+<p>CR: 1010123456 | VAT: 300123456789003</p>
+<p>King Fahd Rd, Riyadh, Saudi Arabia</p>
+<p>support@lavafitness.com</p>
+<p>Sun–Thu: 9 AM – 6 PM (AST)</p>
+</div>
+</div>
+</section>
+</div>
+
+<!-- =================== FOOTER (always visible) =================== -->
+<footer class="footer" id="mainFooter">
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-col">
+<h4>LAVA FITNESS</h4>
+<p style="font-size:13px;line-height:1.6;margin-bottom:12px">Premium fitness gear crafted for athletes who demand comfort, style, and performance.</p>
+<a href="https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com" target="_blank" class="footer-trustpilot">
+<span>★★★★★</span> 4.8/5 on Trustpilot
+</a>
+</div>
+<div class="footer-col">
+<h4>Shop</h4>
+<a href="#" onclick="navigateTo('collection');return false">All Products</a>
+<a href="#" onclick="navigateTo('product-1');return false">Best Sellers</a>
+<a href="#" onclick="navigateTo('collection');return false">New Arrivals</a>
+</div>
+<div class="footer-col">
+<h4>Help</h4>
+<a href="#" onclick="navigateTo('faq');return false">FAQ</a>
+<a href="#" onclick="navigateTo('contact');return false">Contact Us</a>
+<a href="#" onclick="navigateTo('faq');return false">Shipping Info</a>
+<a href="#" onclick="navigateTo('faq');return false">Returns & Exchanges</a>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+<a href="#">Refund Policy</a>
+</div>
+</div>
+<div class="footer-legal">
+<p>© 2026 Lava Fitness LLC | CR: 1010123456 | VAT: 300123456789003 | King Fahd Rd, Riyadh, Saudi Arabia</p>
+</div>
+</div>
+</footer>
+
+<script>
+// =============== DATA ===============
+const TRUSTPILOT_URL = 'https://trustpilot.customerthread.com/?country=US&shop=Lava%20Fitness&logo=&url=LavaFitness.com';
+
+const variants = [
+  {name:'Oatmeal Heather/White',color:'#d4c5a9',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04439_b1_s1_a134_dSP26.jpg?v=1772833288',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_04439_b1_s1_a134_dSP26.jpg%3Fv%3D1772833288',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04439_b1_s1_a134_dSP26.jpg?v=1772833288','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04439_b1_s1_a1_dSP26.jpg?v=1772833288']},
+  {name:'White/Chai Latte',color:'#c9a882',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_09011_b1_s1_a2.jpg?v=1762150104',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_09011_b1_s1_a2.jpg%3Fv%3D1762150104',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_09011_b1_s1_a2.jpg?v=1762150104','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_09011_b1_s1_a1.jpg?v=1762150104']},
+  {name:'White Heather/Grey',color:'#b0b0b0',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06082_b1_s1_a1.jpg?v=1740662433',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06082_b1_s1_a1.jpg%3Fv%3D1740662433',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06082_b1_s1_a1.jpg?v=1740662433','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06082_b1_s1_a2.jpg?v=1740662433']},
+  {name:'White/Neon Bubblegum',color:'#ff69b4',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/a0480u_06388_b1_s1_a1.jpg?v=1752012053',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2Fa0480u_06388_b1_s1_a1.jpg%3Fv%3D1752012053',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/a0480u_06388_b1_s1_a1.jpg?v=1752012053','https://cdn.shopify.com/s/files/1/2185/2813/files/a0480u_06388_b1_s1_a3.jpg?v=1752012053']},
+  {name:'Vintage Pink/White',color:'#d4a0a0',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07779_b1_s1_a3_dSP26.jpg?v=1771363177',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_07779_b1_s1_a3_dSP26.jpg%3Fv%3D1771363177',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07779_b1_s1_a3_dSP26.jpg?v=1771363177','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07779_b1_s1_a243_dSP26.jpg?v=1770979341']},
+  {name:'White/Vintage Pink',color:'#e8b4b8',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07866_b1_s1_a243_dSP26_c6bb5dcb-0b8d-4096-b818-5e1482d94147.jpg?v=1771363109',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_07866_b1_s1_a243_dSP26_c6bb5dcb-0b8d-4096-b818-5e1482d94147.jpg%3Fv%3D1771363109',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07866_b1_s1_a243_dSP26_c6bb5dcb-0b8d-4096-b818-5e1482d94147.jpg?v=1771363109','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07866_b1_s1_a243_dSP26.jpg?v=1771363109']},
+  {name:'Smoky Quartz/White',color:'#8b7d72',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_03469_b1_s1_a1.jpg?v=1741696849',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_03469_b1_s1_a1.jpg%3Fv%3D1741696849',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_03469_b1_s1_a1.jpg?v=1741696849','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_03469_b1_s1_a2.jpg?v=1741696849']},
+  {name:'Burgundy/White',color:'#800020',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06520_b1_s1_a2.jpg?v=1762280761',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06520_b1_s1_a2.jpg%3Fv%3D1762280761',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06520_b1_s1_a2.jpg?v=1762280761']},
+  {name:'Crystal Clear Blue',color:'#87ceeb',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_6160_b1_s1_a1.jpg?v=1743071320',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_6160_b1_s1_a1.jpg%3Fv%3D1743071320',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_6160_b1_s1_a1.jpg?v=1743071320','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_6160_b1_s1_a2.jpg?v=1743602714']},
+  {name:'Light Cocoa',color:'#a0826d',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06576_b1_s1_a2.jpg?v=1762280261',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06576_b1_s1_a2.jpg%3Fv%3D1762280261',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06576_b1_s1_a2.jpg?v=1762280261','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06576_b1_s1_a3.jpg?v=1762280261']},
+  {name:'Brownstone/White',color:'#6d4c33',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0934_b1_s1_a1.jpg?v=1762149928',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_0934_b1_s1_a1.jpg%3Fv%3D1762149928',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0934_b1_s1_a1.jpg?v=1762149928','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0934_b1_s1_a2_bcf340cf-5cc3-4d08-9630-0752ad7712fb.jpg?v=1762455338']},
+  {name:'Pink Wild Rose',color:'#c76f82',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06515_b1_s1_a2.jpg?v=1753755913',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06515_b1_s1_a2.jpg%3Fv%3D1753755913',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06515_b1_s1_a2.jpg?v=1753755913','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06515_b1_s1_a1.jpg?v=1753755913']},
+  {name:'Olive Tree/Black',color:'#556b2f',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_05303_b1_s1_a126_dSP26_d50fc47d-61ca-49f2-b0a9-86bbc4c86972.jpg?v=1770298648',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_05303_b1_s1_a126_dSP26_d50fc47d-61ca-49f2-b0a9-86bbc4c86972.jpg%3Fv%3D1770298648',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_05303_b1_s1_a126_dSP26_d50fc47d-61ca-49f2-b0a9-86bbc4c86972.jpg?v=1770298648']},
+  {name:'Plum Kiss',color:'#8e4585',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07861_b1_s1_a1_dSP26.jpg?v=1769550016',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_07861_b1_s1_a1_dSP26.jpg%3Fv%3D1769550016',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07861_b1_s1_a1_dSP26.jpg?v=1769550016','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07861_b1_s1_a2_dSP26.jpg?v=1769550096']},
+  {name:'Candy Red/White',color:'#dc143c',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06335_b1_s1_a1.jpg?v=1745394283',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=product___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06335_b1_s1_a1.jpg%3Fv%3D1745394283',price:'44 SAR',oldPrice:'123 SAR',
+    gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06335_b1_s1_a1.jpg?v=1745394283','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06335_b1_s1_a2.jpg?v=1745394283']}
+];
+
+const reviews = [
+  {name:'Fahad Al-Rashidi',img:3,text:'Received my pack of 3 pairs in less than 24 hours! The quality is amazing — genuine ALO socks with incredible arch support for my yoga sessions.',date:'2 weeks ago'},
+  {name:'Noura Al-Saud',img:5,text:'Official ALO socks at this price for 3 pairs is unbelievable. Perfect for my pilates class. The grip and cushioning are exactly what I needed!',date:'1 week ago'},
+  {name:'Ahmed Al-Harbi',img:7,text:'Best workout socks I\'ve ever owned. Got 3 pairs delivered to Riyadh in 24 hours. The breathable material keeps my feet dry even during intense HIIT.',date:'3 days ago'},
+  {name:'Sara Al-Qahtani',img:9,text:'Love the retro design! 3 pairs of authentic ALO socks for just 44 SAR — I couldn\'t believe it. They look great with my gym outfits.',date:'1 month ago'},
+  {name:'Khalid Al-Dosari',img:11,text:'Lightning fast delivery — arrived the next day! The quality is 100% official ALO. Already told all my friends. Will definitely order again.',date:'5 days ago'},
+  {name:'Maha Al-Otaibi',img:15,text:'These are my go-to socks for everything now. Yoga, walking, gym — and getting 3 pairs in one pack is such great value. Authentic ALO quality.',date:'2 weeks ago'},
+  {name:'Omar Al-Shehri',img:17,text:'The arch support is a game changer. Ordered at night, received by noon the next day! Official ALO product at an incredible price for 3 pairs.',date:'4 days ago'},
+  {name:'Reem Al-Zahrani',img:20,text:'Ordered the vintage pink — 3 pairs arrived in beautiful ALO packaging within 24h. Comfortable from the first wear. Highly recommend!',date:'1 week ago'}
+];
+
+const faqData = {
+  'Shipping':[
+    {q:'How long does shipping take?',a:'We offer FREE express 24-hour delivery across Saudi Arabia. Order today and receive your pack of 3 pairs by tomorrow! You\'ll receive tracking information via email once your order ships.'},
+    {q:'Do you ship internationally?',a:'Currently we primarily serve Saudi Arabia and the GCC region. Contact us for international shipping inquiries and we\'ll do our best to accommodate.'},
+    {q:'Is shipping really free?',a:'Yes! We offer completely free 24-hour express shipping on all orders. No minimum purchase required.'}
+  ],
+  'Returns':[
+    {q:'What is your return policy?',a:'We offer a 30-day hassle-free return policy. If you\'re not completely satisfied with your pack of 3 pairs, return the item in its original condition for a full refund.'},
+    {q:'How do I start a return?',a:'Simply contact our support team at support@lavafitness.com with your order number. We\'ll provide a return shipping label and process your refund within 5-7 business days.'},
+    {q:'Can I exchange for a different color?',a:'Absolutely! We\'re happy to exchange for a different color or size. Just reach out to our team and we\'ll handle it.'}
+  ],
+  'Products':[
+    {q:'Are these official ALO socks?',a:'Yes! We are an authorized retailer of ALO products. Every pair of socks we sell is 100% authentic with official ALO branding and materials. Each order includes a pack of 3 pairs.'},
+    {q:'What does the pack of 3 include?',a:'Each order contains 3 pairs of official ALO Half-Crew Throwback Socks in your selected colorway, premium branded packaging, and a certificate of authenticity.'},
+    {q:'Why is there a limit of 1 per order?',a:'Due to extremely high demand and limited stock, we restrict orders to 1 item (pack of 3 pairs) per customer to ensure as many people as possible can enjoy these premium socks.'}
+  ],
+  'Orders':[
+    {q:'How can I track my order?',a:'Once your order ships, you\'ll receive an email with tracking information. With our 24-hour delivery, you\'ll receive your pack quickly!'},
+    {q:'Can I cancel or modify my order?',a:'You can cancel or modify your order within 2 hours of placing it. After that, orders enter processing and cannot be changed due to our fast 24-hour shipping.'},
+    {q:'What payment methods do you accept?',a:'We accept all major credit cards (Visa, Mastercard, American Express), Apple Pay, and bank transfers. All payments are processed securely.'}
+  ]
+};
+
+// =============== ROUTING ===============
+function navigateTo(page) {
+  document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+  const target = document.getElementById(page);
+  if(target){target.style.display='block';window.scrollTo(0,0)}
+  else{document.getElementById('home').style.display='block';window.scrollTo(0,0)}
+  window.location.hash = page;
+  // Show/hide sticky ATC
+  const sticky = document.getElementById('stickyATC1');
+  const stickyNew = document.getElementById('stickyATCNew');
+  if(sticky) sticky.style.display = (page === 'product-1') ? 'block' : 'none';
+  if(stickyNew) stickyNew.style.display = (page === 'socksnew') ? 'block' : 'none';
+  // Close mobile menu if open
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+window.addEventListener('hashchange', () => navigateTo(location.hash.slice(1)||'home'));
+
+// =============== MOBILE MENU ===============
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+
+// =============== ANNOUNCEMENT SLIDER ===============
+let announceIndex = 0;
+function slideAnnounce(){
+  const slider = document.getElementById('announceSlider');
+  const total = slider.children.length;
+  announceIndex = (announceIndex+1)%total;
+  slider.style.transform = `translateX(-${announceIndex*100}%)`;
+}
+setInterval(slideAnnounce,3000);
+
+// =============== DELIVERY TIMER ===============
+function updateTimer(){
+  const now = new Date();
+  const end = new Date(now);
+  end.setHours(23,59,59,999);
+  const diff = Math.max(0, end - now);
+  const h = Math.floor(diff/3600000);
+  const m = Math.floor((diff%3600000)/60000);
+  const s = Math.floor((diff%60000)/1000);
+  document.getElementById('timerH').textContent = String(h).padStart(2,'0');
+  document.getElementById('timerM').textContent = String(m).padStart(2,'0');
+  document.getElementById('timerS').textContent = String(s).padStart(2,'0');
+}
+setInterval(updateTimer,1000);
+updateTimer();
+
+// =============== RENDER PRODUCT CARDS ===============
+function renderProductCard(clickTarget){
+  const v = variants[0];
+  return `<div class="product-card" onclick="navigateTo('${clickTarget}')">
+    <div class="product-card-img">
+      <div class="product-badge">SALE</div>
+      <img src="${v.img}" alt="Unisex Half-Crew Throwback Sock" loading="lazy">
+    </div>
+    <div class="product-card-info">
+      <div class="product-card-name">Unisex Half-Crew Throwback Sock</div>
+      <div class="product-card-price">
+        <span class="price-current">44 SAR</span>
+        <span class="price-old">123 SAR</span>
+      </div>
+      <div class="variant-dots">
+        ${variants.slice(0,6).map(vv=>`<span class="variant-dot" style="background:${vv.color}"></span>`).join('')}
+        <span style="font-size:11px;color:var(--text-light);display:flex;align-items:center">+${variants.length-6}</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+// Featured grid (show the product card multiple times as different "views" for visual richness)
+document.getElementById('featuredGrid').innerHTML = [0,3,7,4,8,11].map(i=>{
+  const v = variants[i];
+  return `<div class="product-card" onclick="navigateTo('product-1')">
+    <div class="product-card-img">
+      <div class="product-badge">${v.oldPrice?'SALE':'NEW'}</div>
+      <img src="${v.img}" alt="${v.name}" loading="lazy">
+    </div>
+    <div class="product-card-info">
+      <div class="product-card-name">Throwback Sock — ${v.name}</div>
+      <div class="product-card-price">
+        <span class="price-current">${v.price}</span>
+        ${v.oldPrice?`<span class="price-old">${v.oldPrice}</span>`:''}
+      </div>
+    </div>
+  </div>`;
+}).join('');
+
+// Collection grid
+document.getElementById('collectionGrid').innerHTML = variants.map((v,i)=>{
+  return `<div class="product-card" onclick="navigateTo('product-1')">
+    <div class="product-card-img">
+      ${v.oldPrice?'<div class="product-badge">SALE</div>':''}
+      <img src="${v.img}" alt="${v.name}" loading="lazy">
+    </div>
+    <div class="product-card-info">
+      <div class="product-card-name">Throwback Sock — ${v.name}</div>
+      <div class="product-card-price">
+        <span class="price-current">${v.price}</span>
+        ${v.oldPrice?`<span class="price-old">${v.oldPrice}</span>`:''}
+      </div>
+    </div>
+  </div>`;
+}).join('');
+
+// =============== VARIANT SELECTOR ===============
+let activeVariant = 0;
+function selectVariant(idx){
+  activeVariant = idx;
+  const v = variants[idx];
+  document.getElementById('mainImg1').src = v.img;
+  document.getElementById('atcLink1').href = v.link;
+  document.getElementById('stickyAtcLink1').href = v.link;
+  document.getElementById('prodPrice1').textContent = v.price;
+  document.getElementById('prodOldPrice1').textContent = v.oldPrice || '';
+  document.getElementById('prodOldPrice1').style.display = v.oldPrice ? 'inline' : 'none';
+  // Update variant buttons
+  document.querySelectorAll('#variantBtns1 .variant-btn').forEach((btn,i)=>{
+    btn.classList.toggle('active',i===idx);
+  });
+  // Update thumbnails
+  renderThumbnails(v);
+}
+
+function renderThumbnails(v){
+  const container = document.getElementById('thumbs1');
+  container.innerHTML = v.gallery.map((src,i)=>
+    `<div class="product-thumb ${i===0?'active':''}" onclick="document.getElementById('mainImg1').src='${src}';document.querySelectorAll('#thumbs1 .product-thumb').forEach(t=>t.classList.remove('active'));this.classList.add('active')">
+      <img src="${src}" alt="View ${i+1}" loading="lazy">
+    </div>`
+  ).join('');
+}
+
+// Build variant buttons
+document.getElementById('variantBtns1').innerHTML = variants.map((v,i)=>
+  `<button class="variant-btn ${i===0?'active':''}" onclick="selectVariant(${i})" style="display:flex;align-items:center;gap:6px">
+    <span style="width:14px;height:14px;border-radius:50%;background:${v.color};display:inline-block;border:1px solid rgba(0,0,0,.15);flex-shrink:0"></span>
+    ${v.name}
+  </button>`
+).join('');
+
+// Init thumbnails
+renderThumbnails(variants[0]);
+// Init ATC link
+document.getElementById('atcLink1').href = variants[0].link;
+document.getElementById('stickyAtcLink1').href = variants[0].link;
+
+// =============== REVIEWS ===============
+function renderReview(r){
+  return `<div class="review-card">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-text">${r.text}</div>
+    <div class="review-author">
+      <img class="review-avatar" src="https://i.pravatar.cc/100?img=${r.img}" alt="${r.name}" loading="lazy">
+      <div>
+        <div class="review-name">${r.name}</div>
+        <div class="review-date">${r.date}</div>
+        <div class="review-verified">Verified Purchase ✓</div>
+      </div>
+    </div>
+  </div>`;
+}
+document.getElementById('reviewsHome').innerHTML = reviews.map(renderReview).join('');
+document.getElementById('productReviews1').innerHTML = reviews.slice(0,4).map(renderReview).join('');
+
+// =============== YOU MAY ALSO LIKE ===============
+document.getElementById('alsoLike1').innerHTML = [3,7,8,11,14].map(i=>{
+  const v = variants[i];
+  return `<div class="also-like-card" onclick="selectVariant(${i});window.scrollTo(0,0)">
+    <img src="${v.img}" alt="${v.name}" loading="lazy">
+    <div class="also-like-card-info">
+      <h4>${v.name}</h4>
+      <div class="price">${v.price}</div>
+    </div>
+  </div>`;
+}).join('');
+
+// =============== FAQ ===============
+function renderFAQ(container, data, limit){
+  let html = '';
+  const tabs = Object.keys(data);
+  tabs.forEach((tab,ti)=>{
+    const items = limit ? data[tab].slice(0,limit) : data[tab];
+    items.forEach(item=>{
+      html += `<div class="faq-item" data-tab="${tab}">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          ${item.q} <span>▼</span>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">${item.a}</div></div>
+      </div>`;
+    });
+  });
+  container.innerHTML = html;
+}
+
+// Home FAQ (first 4 items)
+const homeFaqData = {};
+Object.keys(faqData).slice(0,2).forEach(k=>homeFaqData[k]=faqData[k].slice(0,2));
+renderFAQ(document.getElementById('faqHomeContainer'), homeFaqData);
+
+// Full FAQ page
+const faqTabsEl = document.getElementById('faqTabs');
+const faqFullEl = document.getElementById('faqFullContainer');
+let activeFaqTab = Object.keys(faqData)[0];
+
+function renderFullFAQ(){
+  faqTabsEl.innerHTML = Object.keys(faqData).map(tab=>
+    `<button class="faq-tab ${tab===activeFaqTab?'active':''}" onclick="activeFaqTab='${tab}';renderFullFAQ()">${tab}</button>`
+  ).join('');
+  let html = '';
+  faqData[activeFaqTab].forEach(item=>{
+    html += `<div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        ${item.q} <span>▼</span>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner">${item.a}</div></div>
+    </div>`;
+  });
+  faqFullEl.innerHTML = html;
+}
+renderFullFAQ();
+
+// =============== SCROLL ANIMATIONS ===============
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+// =============== HEADER SCROLL ===============
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainHeader').classList.toggle('scrolled',window.scrollY>10);
+});
+
+// =============== INIT ===============
+window.addEventListener('DOMContentLoaded',()=>{
+  navigateTo(location.hash.slice(1)||'home');
+});
+
+// =============== SOCKSNEW PAGE (35 colors + S/M/L) ===============
+const newVariants = [
+  {name:'Oatmeal Heather/White',hex:'#d4c5a9',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04439_b1_s1_a134_dSP26.jpg?v=1772833288',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Oatmeal%20Heather%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_04439_b1_s1_a134_dSP26.jpg%3Fv%3D1772833288',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0339U_04439_b1_a3.jpg?v=1772833288','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04439_b1_s1_a134_dSP26.jpg?v=1772833288','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04439_b1_s1_a1_dSP26.jpg?v=1772833288']},
+  {name:'White/Chai Latte',hex:'#c9a882',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_09011_b1_s1_a2.jpg?v=1762150104',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FChai%20Latte___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_09011_b1_s1_a2.jpg%3Fv%3D1762150104',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_09011_b1_s1_a2.jpg?v=1762150104']},
+  {name:'White Heather/Grey',hex:'#b0b0b0',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06082_b1_s1_a1.jpg?v=1740662433',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%20Heather%2FGrey___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06082_b1_s1_a1.jpg%3Fv%3D1740662433',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06082_b1_s1_a1.jpg?v=1740662433']},
+  {name:'White/Neon Bubblegum',hex:'#ff69b4',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/a0480u_06388_b1_s1_a1.jpg?v=1752012053',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FNeon%20Bubblegum___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2Fa0480u_06388_b1_s1_a1.jpg%3Fv%3D1752012053',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/a0480u_06388_b1_s1_a1.jpg?v=1752012053']},
+  {name:'Vintage Pink/White',hex:'#d4a0a0',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07779_b1_s1_a3_dSP26.jpg?v=1771363177',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Vintage%20Pink%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_07779_b1_s1_a3_dSP26.jpg%3Fv%3D1771363177',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07779_b1_s1_a2_dSP26.jpg?v=1771363177','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07779_b1_s1_a3_dSP26.jpg?v=1771363177']},
+  {name:'White/Vintage Pink',hex:'#e8b4b8',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07866_b1_s1_a243_dSP26_c6bb5dcb-0b8d-4096-b818-5e1482d94147.jpg?v=1771363109',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FVintage%20Pink___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_07866_b1_s1_a243_dSP26_c6bb5dcb-0b8d-4096-b818-5e1482d94147.jpg%3Fv%3D1771363109',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07866_b1_s1_a2_dSP26.jpg?v=1771363109','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07866_b1_s1_a243_dSP26_c6bb5dcb-0b8d-4096-b818-5e1482d94147.jpg?v=1771363109']},
+  {name:'Smoky Quartz/White',hex:'#8b7d72',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_03469_b1_s1_a1.jpg?v=1741696849',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Smoky%20Quartz%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_03469_b1_s1_a1.jpg%3Fv%3D1741696849',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_03469_b1_s1_a1.jpg?v=1741696849']},
+  {name:'Burgundy/White',hex:'#800020',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06520_b1_s1_a2.jpg?v=1762280761',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Burgundy%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06520_b1_s1_a2.jpg%3Fv%3D1762280761',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06520_b1_s1_a2.jpg?v=1762280761']},
+  {name:'Crystal Clear Blue',hex:'#87ceeb',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_6160_b1_s1_a1.jpg?v=1743071320',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FCrystal%20Clear%20Blue___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_6160_b1_s1_a1.jpg%3Fv%3D1743071320',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_6160_b1_s1_a1.jpg?v=1743071320']},
+  {name:'White/Winter Frost',hex:'#a8c8d8',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0907_b1_s1_a1.jpg?v=1762282074',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FWinter%20Frost___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_0907_b1_s1_a1.jpg%3Fv%3D1762282074',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0907_b1_s1_a1.jpg?v=1762282074']},
+  {name:'Light Cocoa',hex:'#a0826d',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06576_b1_s1_a2.jpg?v=1762280261',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FLight%20Cocoa___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06576_b1_s1_a2.jpg%3Fv%3D1762280261',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06576_b1_s1_a2.jpg?v=1762280261']},
+  {name:'Brownstone/White',hex:'#6d4c33',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0934_b1_s1_a1.jpg?v=1762149928',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Brownstone%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_0934_b1_s1_a1.jpg%3Fv%3D1762149928',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0934_b1_s1_a1.jpg?v=1762149928']},
+  {name:'Pink Wild Rose',hex:'#c76f82',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06515_b1_s1_a2.jpg?v=1753755913',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Pink%20Wild%20Rose%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06515_b1_s1_a2.jpg%3Fv%3D1753755913',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06515_b1_s1_a2.jpg?v=1753755913']},
+  {name:'Olive Tree/Black',hex:'#556b2f',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_05303_b1_s1_a126_dSP26_d50fc47d-61ca-49f2-b0a9-86bbc4c86972.jpg?v=1770298648',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Olive%20Tree%2FBlack___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_05303_b1_s1_a126_dSP26_d50fc47d-61ca-49f2-b0a9-86bbc4c86972.jpg%3Fv%3D1770298648',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_05303_b1_s1_a126_dSP26_d50fc47d-61ca-49f2-b0a9-86bbc4c86972.jpg?v=1770298648']},
+  {name:'Plum Kiss',hex:'#8e4585',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07861_b1_s1_a1_dSP26.jpg?v=1769550016',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FPlum%20Kiss___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_07861_b1_s1_a1_dSP26.jpg%3Fv%3D1769550016',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07861_b1_s1_a1_dSP26.jpg?v=1769550016']},
+  {name:'Candy Red/White',hex:'#dc143c',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06335_b1_s1_a1.jpg?v=1745394283',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Candy%20Red%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06335_b1_s1_a1.jpg%3Fv%3D1745394283',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06335_b1_s1_a1.jpg?v=1745394283']},
+  {name:'Candy Heart Pink',hex:'#ff91a4',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0998_b1_s1_a1_2f25ccde-b432-4441-a9aa-134b57997c09.jpg?v=1768411333',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Candy%20Heart%20Pink%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_0998_b1_s1_a1_2f25ccde-b432-4441-a9aa-134b57997c09.jpg%3Fv%3D1768411333',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0998_b1_s1_a1.jpg?v=1768288711']},
+  {name:'White/Candy Heart Pink',hex:'#ffb6c1',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_09013_b1_s1_a2.jpg?v=1768288758',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FCandy%20Heart%20Pink___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_09013_b1_s1_a2.jpg%3Fv%3D1768288758',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_09013_b1_s1_a1.jpg?v=1768288758']},
+  {name:'Candlelight Yellow',hex:'#f5d76e',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0997_b1_s1_a1.jpg?v=1765864317',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Candlelight%20Yellow%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_0997_b1_s1_a1.jpg%3Fv%3D1765864317',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0997_b1_s1_a1.jpg?v=1765864317']},
+  {name:'White/Burgundy',hex:'#722f37',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06573_b1_s1_a2.jpg?v=1762280505',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FBurgundy___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06573_b1_s1_a2.jpg%3Fv%3D1762280505',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06573_b1_s1_a2.jpg?v=1762280505']},
+  {name:'Bluestone/White',hex:'#3b6080',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06514_b1_s1_a2.jpg?v=1762280360',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Bluestone%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06514_b1_s1_a2.jpg%3Fv%3D1762280360',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06514_b1_s1_a2.jpg?v=1762280360']},
+  {name:'Bright Red/White',hex:'#ee3333',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0930_b1_s1_a1.jpg?v=1763637133',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Bright%20Red%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_0930_b1_s1_a1.jpg%3Fv%3D1763637133',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0930_b1_s1_a1.jpg?v=1763637133']},
+  {name:'White/Bright Red',hex:'#ff4040',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0906_b1_s1_a1.jpg?v=1763637151',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FBright%20Red___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_0906_b1_s1_a1.jpg%3Fv%3D1763637151',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0906_b1_s1_a1.jpg?v=1763637151']},
+  {name:'Taupe/Black',hex:'#483c32',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04497_b1_s1_a2.jpg?v=1750739085',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Taupe%2FBlack___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_04497_b1_s1_a2.jpg%3Fv%3D1750739085',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04497_b1_s1_a2.jpg?v=1750739085']},
+  {name:'Winter Frost/White',hex:'#b8d4e3',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0933_b1_s1_a1.jpg?v=1762282006',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Winter%20Frost%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_0933_b1_s1_a1.jpg%3Fv%3D1762282006',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_0933_b1_s1_a1.jpg?v=1762282006']},
+  {name:'Green Olive/White',hex:'#708238',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06519_b1_s1_a2.jpg?v=1762280673',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Green%20Olive%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06519_b1_s1_a2.jpg%3Fv%3D1762280673',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06519_b1_s1_a2.jpg?v=1762280673']},
+  {name:'White/Pink Wild Rose',hex:'#e0a0b0',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06590_b1_s1_a2.jpg?v=1762280187',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FPink%20Wild%20Rose___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06590_b1_s1_a2.jpg%3Fv%3D1762280187',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06590_b1_s1_a2.jpg?v=1762280187']},
+  {name:'Seashell Blue',hex:'#6ba3be',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_05487_b1_s1_a1.jpg?v=1749763900',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Seashell%20Blue%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_05487_b1_s1_a1.jpg%3Fv%3D1749763900',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_05487_b1_s1_a1.jpg?v=1749763900']},
+  {name:'Spearmint/White',hex:'#45b08c',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06332_b1_s1_a2.jpg?v=1747822727',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Spearmint%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06332_b1_s1_a2.jpg%3Fv%3D1747822727',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06332_b1_s1_a2.jpg?v=1747822727']},
+  {name:'White/Candy Red',hex:'#e85050',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06281_b1_s1_a3.jpg?v=1746032317',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FCandy%20Red___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_06281_b1_s1_a3.jpg%3Fv%3D1746032317',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_06281_b1_s1_a3.jpg?v=1746032317']},
+  {name:'Navy/White',hex:'#001f3f',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04893_b1_s1_a1.jpg?v=1743070612',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Navy%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_04893_b1_s1_a1.jpg%3Fv%3D1743070612',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04893_b1_s1_a1.jpg?v=1743070612']},
+  {name:'White/Navy',hex:'#1a3a5c',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_05423_b1_s1_a1.jpg?v=1743072023',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FNavy___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_05423_b1_s1_a1.jpg%3Fv%3D1743072023',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_05423_b1_s1_a1.jpg?v=1743072023']},
+  {name:'Espresso/White',hex:'#3c1e0e',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04259_b1_s1_a2_92e8f232-f13d-4d37-b4a8-059a61f6b8ad.jpg?v=1763419393',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Espresso%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_04259_b1_s1_a2_92e8f232-f13d-4d37-b4a8-059a61f6b8ad.jpg%3Fv%3D1763419393',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_04259_b1_s1_a2_92e8f232-f13d-4d37-b4a8-059a61f6b8ad.jpg?v=1763419393']},
+  {name:'Black/White',hex:'#111111',img:'https://cdn.shopify.com/s/files/1/2185/2813/products/A0480U_0100_b1_a1.jpg?v=1675728954',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20Black%2FWhite___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Fproducts%2FA0480U_0100_b1_a1.jpg%3Fv%3D1675728954',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/products/A0480U_0100_b1_a1.jpg?v=1675728954']},
+  {name:'White/Black',hex:'#e0e0e0',img:'https://cdn.shopify.com/s/files/1/2185/2813/products/A0480U_0001_b1_a1.jpg?v=1669748933',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FBlack___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Fproducts%2FA0480U_0001_b1_a1.jpg%3Fv%3D1669748933',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/products/A0480U_0001_b1_a1.jpg?v=1669748933']},
+  {name:'White/Clover Green',hex:'#2e8b57',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07917_b1_s1_a1.jpg?v=1762859337',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Throwback%20Sock%20-%20White%2FClover%20Green___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0480U_07917_b1_s1_a1.jpg%3Fv%3D1762859337',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07917_b1_s1_a1.jpg?v=1762859337','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07917_b1_s1_a3.jpg?v=1762881352','https://cdn.shopify.com/s/files/1/2185/2813/files/A0480U_07917_b1_s1_a2_7772d155-814e-4ef5-8578-b02ccc3005bb.jpg?v=1762881411']},
+  {name:'Cashmere Mesh — Black',hex:'#0a0a0a',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0930U_01_b1_s1_a1_dSP26_67fd264b-5b10-48a8-8bb6-e90f92d2faf9.jpg?v=1771358329',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Cashmere%20Mesh%20Sock%20-%20Black___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0930U_01_b1_s1_a1_dSP26_67fd264b-5b10-48a8-8bb6-e90f92d2faf9.jpg%3Fv%3D1771358329',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0930U_01_b1_s1_a1_dSP26_67fd264b-5b10-48a8-8bb6-e90f92d2faf9.jpg?v=1771358329','https://cdn.shopify.com/s/files/1/2185/2813/files/A0930U_01_b1_s1_a1_dSP26.jpg?v=1771358329']},
+  {name:'Performance — Black',hex:'#1a1a1a',img:'https://cdn.shopify.com/s/files/1/2185/2813/files/A0295W_01_b1_a1_15fcfce3-4de2-43d2-a6bd-049072d44c7c.jpg?v=1710803282',link:'https://tkfs.trackforces.com/aff_c?offer_id=104740&aff_id=1315&aff_sub5=1585203536938703&source=Unisex%20Half-Crew%20Performance%20Sock%20-%20Black___https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2185%2F2813%2Ffiles%2FA0295W_01_b1_a1_15fcfce3-4de2-43d2-a6bd-049072d44c7c.jpg%3Fv%3D1710803282',gallery:['https://cdn.shopify.com/s/files/1/2185/2813/files/A0295W_01_b1_a1_15fcfce3-4de2-43d2-a6bd-049072d44c7c.jpg?v=1710803282']}
+];
+
+let activeNewColor = 0;
+let activeNewSize = 'M';
+
+// Reorder: move Black/White and White/Black to the front (best sellers)
+const bsOrder = ['Black/White','White/Black'];
+newVariants.sort((a,b) => {
+  const ai = bsOrder.indexOf(a.name);
+  const bi = bsOrder.indexOf(b.name);
+  if(ai !== -1 && bi !== -1) return ai - bi;
+  if(ai !== -1) return -1;
+  if(bi !== -1) return 1;
+  return 0;
+});
+
+function selectNewColor(idx) {
+  activeNewColor = idx;
+  const v = newVariants[idx];
+  document.getElementById('mainImgNew').src = v.img;
+  document.getElementById('colorNameNew').textContent = v.name;
+  document.getElementById('atcLinkNew').href = v.link;
+  document.getElementById('stickyAtcLinkNew').href = v.link;
+  // Update image thumbnails
+  document.querySelectorAll('#colorDotsNew .color-img-btn').forEach((d,i) => {
+    d.classList.toggle('active', i===idx);
+  });
+  // Update thumbs
+  const tc = document.getElementById('thumbsNew');
+  tc.innerHTML = v.gallery.map((src,i) =>
+    `<div class="product-thumb ${i===0?'active':''}" onclick="document.getElementById('mainImgNew').src='${src}';document.querySelectorAll('#thumbsNew .product-thumb').forEach(t=>t.classList.remove('active'));this.classList.add('active')">
+      <img src="${src}" alt="View ${i+1}" loading="lazy">
+    </div>`
+  ).join('');
+}
+
+function selectSizeNew(size, btn) {
+  activeNewSize = size;
+  btn.parentElement.querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// Build color image thumbnails
+document.getElementById('colorDotsNew').innerHTML = newVariants.map((v,i) =>
+  `<div class="color-img-btn ${i===0?'active':''}" onclick="selectNewColor(${i})" title="${v.name}">
+    <img src="${v.img}" alt="${v.name}" loading="lazy">
+  </div>`
+).join('');
+
+// Init socksnew
+selectNewColor(0);
+document.getElementById('productReviewsNew').innerHTML = reviews.slice(0,4).map(renderReview).join('');
+
+</script>
+</body>
+</html>
